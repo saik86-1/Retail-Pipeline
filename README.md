@@ -27,7 +27,6 @@ A zero-cost, local ELT that turns raw retail CSVs into clean, tested tables and 
 - **Data Quality**: dbt **schema tests** (not_null, unique, relationships) to protect KPIs.
 - **Documentation & Lineage**: dbt **docs** and lineage graph to explain dependencies.
 - **Performance Mindset**: pre-aggregating per-order revenue for faster daily rollups.
-- **Version Control & Packaging**: Git/GitHub structure ready for CI (optional GitHub Actions).
 
 ---
 
