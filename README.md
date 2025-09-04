@@ -5,7 +5,9 @@ A zero-cost, local ELT that turns raw retail CSVs into clean, tested tables and 
 - **Intermediate:** `int_order_revenue` (sums line items per order)
 - **Marts:** `customer_360` (AOV, total revenue, repeat flag) and `daily_kpis` (orders/day, new vs repeat, revenue, AOV)
 
----
+Flow Chart
+<img width="741" height="358" alt="image" src="https://github.com/user-attachments/assets/30f9dda5-c352-48e1-85e1-758fc298bf24" />
+
 
 ## What I built 
 
@@ -33,19 +35,3 @@ A zero-cost, local ELT that turns raw retail CSVs into clean, tested tables and 
 
 <img width="1399" height="660" alt="image" src="https://github.com/user-attachments/assets/50915dc2-a8b6-4d36-9d3b-97a577d9f8b0" />
 
-
-
-Raw CSVs (customers, orders, products)
-         │
-         ▼
-DuckDB warehouse (warehouse.duckdb)
-         │
-         ▼
-Staging (stg_*) → clean names/types, trims, safe casts
-         │
-         ▼
-Intermediate (int_order_revenue) → per-order revenue
-         │
-         ▼
-Marts → customer_360 (AOV, total_revenue, repeat)
-      → daily_kpis (orders/day, new vs repeat, revenue, AOV)
