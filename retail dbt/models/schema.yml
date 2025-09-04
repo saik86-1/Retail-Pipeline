@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Cleaned customers from Northwind"
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+      - name: company_name
+      - name: contact_name
+      - name: country
+
+  - name: stg_orders
+    description: "Cleaned orders from Northwind"
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+      - name: order_ts
+      - name: freight
+  - name: customer_360
+    description: "Per-customer KPIs built from staging models"
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+  - name: daily_kpis
+    description: "Per-day orders, unique customers, new vs repeat"
+    columns:
+      - name: order_date
+        tests: [not_null, unique]
+
