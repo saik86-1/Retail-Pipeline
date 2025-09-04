@@ -29,6 +29,10 @@ A zero-cost, local ELT that turns raw retail CSVs into clean, tested tables and 
 - **Performance Mindset**: pre-aggregating per-order revenue for faster daily rollups.
 
 ---
+<img width="315" height="957" alt="image" src="https://github.com/user-attachments/assets/2eb2a1d9-9ef3-4831-809b-a0c02e7e293a" />
+
+<img width="1399" height="660" alt="image" src="https://github.com/user-attachments/assets/50915dc2-a8b6-4d36-9d3b-97a577d9f8b0" />
+
 
 
 Raw CSVs (customers, orders, products)
